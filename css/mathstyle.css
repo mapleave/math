@@ -1,13 +1,19 @@
-#header {height:90px; text-align:center; padding:1em}
-.column_edge1 {float: left; width: 25%; text-align:center;}
-.column_mid {float: left; width: 50%; text-align:center;}
-.column_edge2 {float: left; width: 25%; text-align:center;}
+#header {height:90px; text-align:center; padding:1em;}
+.column_edge1 {float:left; width:25%; text-align:center; padding:1em; box-sizing:border-box;}
+.column_mid {float:left; width:50%; text-align:center; padding:1em; box-sizing:border-box;}
+.column_edge2 {float:left; width:25%; text-align:center; padding:1em; box-sizing:border-box;}
 .left {text-align:left;}
+.leftfixed {position:fixed; left:1%; width:25%;text-align:center;}
+.rightfixed {position:fixed; right:1%; width:25%;text-align:center;}
 #footer {clear:both; text-align:center; padding:1em}
 p.uppercase {text-transform:uppercase;}
 p.lowercase {text-transform:lowercase;}
 p.capitalize {text-transform:capitalize;}
-p.left {text-align:left;}
+p.one {border-style:solid; border-width:5px;}
+@media screen and (max-width: 600px){.leftfixed{width: 25%;font-size:50%;}}
+@media screen and (max-width: 600px){.column_mid{width: 50%;font-size:75%;}}
+@media screen and (max-width: 600px){.rightfixed{width: 25%;font-size:50%;}}
+@media screen and (max-width: 600px){#footer{width: 97%;font-size:50%;}}
 body {
 	background-color:#ffcc66;
 	text-align:center;
@@ -27,13 +33,20 @@ h2 {
 
 h3 {
 	text-align:center;
-	font-size:25px;
+	font-size:2.1px;
 }
 
 p {
 	font-family:"Times New Roman";
 	font-size:1.80em;
 	line-height:2.5;
+	border-top-style:dotted;
+	border-right-style:dotted;
+	border-bottom-style:dotted;
+	border-left-style:dotted;
+	border-color:#5200cc;
+	border-width:5px;
+	border-radius:12px;
 }
 
 a {
