@@ -12,17 +12,19 @@
 <div id="header"><h1>歡迎來到數學小屋~</h1></div>
 <hr>
 <div class="column_edge1">
+	<div class="leftfixed">
 	<a href="calculus.html">微積分</a><br>
 	<a href="高等微積分.html">高等微積分</a><br>
 	<a href="線性代數.html">線性代數</a><br>
+	</div>
 </div>
 <div class="column_mid">
 	<a id="向量空間定義"></a>
 	<h2>向量空間定義</h2>	
 <div class="left">
 	<p>V is a vector space over F<br>
-		(0) For all x、y ∈ V , x+y ∈ V (加法有封閉性)<br>
-		(-1) For all x ∈ V c ∈ F , cx ∈ V (純量乘法有封閉性)<br>
+		(-1) For all x、y ∈ V , x+y ∈ V (加法有封閉性)<br>
+		(0) For all x ∈ V c ∈ F , cx ∈ V (純量乘法有封閉性)<br>
 		(1) For all x、y ∈ V , x+y=y+x (可交換)<br>
 		(2) For all x、y、z ∈ V , (x+y)+z=x+(y+z) (可結合)<br>
 		(3) For all x ∈ V , 存在 0 ∈ V s.t. 0+x=x (存在加法單位元素)<br>
@@ -33,9 +35,78 @@
 		(8) For all x ∈ V , a、b ∈ F , (a+b)x=ax+bx (分配律)
 	</p>
 </div>
+	<a id ="消去法"></a>
+	<h2>消去法(Thm1.1)</h2>
+<div class="left">
+	<p>Let V(F) be a vector space<br>
+		If x,y,z ∈ V(F) s.t. x+y=x+z, then y=z<br>
+		Pf: There exists a vector v in V s.t. x+v=0<br>
+		y=y+0=y+(x+v)=(x+y)+v=(x+z)+v=(x+v)+z=0+z=z<br>
+		(已知:x+y=x+z,v是x的加法反元素,把v當作-x看)<br>
+		推論一: The zero vector is unique<br>
+		pf: If 0 and 0' are zero vector in V<br>
+		then 0=0+0=0+0' => 0=0' by Thm1.1<br>
+		推論二: The inverse of a vector u is unique<br>
+		pf: v,v' be inverse of u in V, i.e. u+v=0 u+v'=0<br>
+		v=v+0=v+(u+v')=(v+u)+v'=0+v'=v'
+	</p>
+</div>
+	<a id ="(Thm1.2)"></a>
+	<h2>(Thm1.2)</h2>
+	<div class="left">
+		<p>In any V(F),the following statements are true:<br>
+			(1) 0x=0 ∀x∈V (2) a0=0 ∀a∈F<br>
+			(3) (-a)u=-(au)=a(-u), ∀a∈F ∀u∈V<br>
+			pf: (1) 0x=(0+0)x=0x+0x ∴ 0=0x<br>
+			(2) a0=a(0+0)=a0+a0 ∴ 0=a0<br>
+			(3) ∵ -(au) is the inverse of au and<br>
+			au+(-a)u=(a+(-a))u=0u=0<br>
+			au+a(-u)=a(u+(-u))=a0=0<br>
+			∴(-a)u, a(-u) are also inverse of au<br>
+			=> -(au)=(-a)u=a(-u) by uniqueness
+		</p>
+	</div>
+	<a id ="子空間定義"></a>
+	<h2>子空間定義</h2>
+	<div class="left">
+		<p>Def: Let V(F) be a vector space<br>
+			A subset W of V, is called a subspace of V<br>
+			If W(F) is also a vector space with the same two operations<br>
+			Remark: 只需要check 向量空間定義的(-1) (0) (3) (4)<br>
+			Thm1.3: Let V be a vector space and W a subset of V.<br>
+			Then W is a subspace of V<=>the following three conditions<br>
+			hold for the operations defined in V.<br>
+			(a) 0∈W  (b) x+y∈W whenever x∈W and y∈W<br>
+			(c) cx∈W whenever c∈F and x∈W<br>
+			In fact, W is nonempty set, then (a) is not even needed.<br>
+			Pf: (=>)If W is a subspace of V, then W is a vector space with<br>
+			the operations of addition and multiplication defind on V.<br>
+			Hence conditions (b) and (c) hold<br>
+			there exists a vector 0'∈W s.t. 0'+x=x ∀x∈W<br>
+			But also x+0=x, thus 0'=0 by Thm1.1. So condition(a) holds.<br>
+			(<=) (只剩需證明(4)) ∀x∈W⊂V => ∃ -x∈V with x+(-x)=0<br>
+			∵ -x=(-1)x∈W by (c) (∴ W exist 加法反元素)<br>=> W is a subspace of V
+		</p>
+	</div>
+	<a id ="(Thm1.4)"></a>
+	<h2>(Thm1.4)</h2>
+	<div class="left">
+		<p>Wα:subspace of V , α∈S, V:a vector space<br>
+			=>∩Wα is a subspace of V<br>
+			Pf: x,y∈∩Wα => x,y∈Wα ∀α∈S => x+y∈Wα ∀α∈S <br>
+			by Thm1.3 (∵Wα is a subspace of V)<br>
+			=> x+y∈∩Wα 
+		</p>
+	</div>
 </div>
 <div class="column_edge2">
+	<div class="rightfixed">
 	<a href="#向量空間定義">向量空間定義</a><br>
+	<a href="#消去法">消去法</a><br>
+	<a href="#(Thm1.2)">(Thm1.2)</a><br>
+	<a href="#子空間定義">子空間定義(Thm1.3)</a><br>
+	<a href="#(Thm1.4)">(Thm1.4)</a><br>
+	</div>
 </div>
 <div style="clear:both">
 <hr>
