@@ -38,7 +38,7 @@
 	<a id ="消去法"></a>
 	<h2>消去法(Thm1.1)</h2>
 <div class="left">
-	<p>Let V(F) be a vector space<br>
+	<p>Let V be a vector space over F<br>
 		If x,y,z ∈ V(F) s.t. x+y=x+z, then y=z<br>
 		Pf: There exists a vector v in V s.t. x+v=0<br>
 		y=y+0=y+(x+v)=(x+y)+v=(x+z)+v=(x+v)+z=0+z=z<br>
@@ -54,7 +54,7 @@
 	<a id ="(Thm1.2)"></a>
 	<h2>(Thm1.2)</h2>
 	<div class="left">
-		<p>In any V(F),the following statements are true:<br>
+		<p>In any V be a vector space over F,the following statements are true:<br>
 			(1) 0x=0 ∀x∈V (2) a0=0 ∀a∈F<br>
 			(3) (-a)u=-(au)=a(-u), ∀a∈F ∀u∈V<br>
 			pf: (1) 0x=(0+0)x=0x+0x ∴ 0=0x<br>
@@ -69,7 +69,7 @@
 	<a id ="子空間定義"></a>
 	<h2>子空間定義</h2>
 	<div class="left">
-		<p>Def: Let V(F) be a vector space<br>
+		<p>Def: Let V be a vector space over F<br>
 			A subset W of V, is called a subspace of V<br>
 			If W(F) is also a vector space with the same two operations<br>
 			Remark: 只需要check 向量空間定義的(-1) (0) (3) (4)<br>
@@ -98,6 +98,36 @@
 			=> x+y∈∩Wα 
 		</p>
 	</div>
+	<a id ="線性組合定義"></a>
+	<h2>線性組合定義</h2>
+	<div class="left">
+		<p>Def: Let V be a vector space over F and S a nonempty subset of V<br>
+			A vector v∈V is called a linear combination of vectors in S<br>
+			v=a1u1+......+anun for some u1...un∈S and a1...an∈F<br>
+			Def: Let S be a nonempty subset of a vector space V.<br>
+			The span of S, denoted span(S)<br>
+			Def: span(∅)={0}<br>
+			Def: A subset S of a vector space V , if span(S)=V<br>
+			we also say that the vectors of S span V.
+		</p>
+	</div>
+	<a id ="(Thm1.5)"></a>
+	<h2>(Thm1.5)</h2>
+	<div class="left">
+		<p>S is the subset of V<br>
+			(a) span(S) is a subspace of V<br>
+			(b) span(S) is the smallest subspace containing S <br>
+			(i.e. if W is a subspace of V and W⊃S, then W⊃span(S) )<br>
+			Pf of (a): ∃ ai∈F,ui∈S i=1...n, ∃ bi∈F,vi∈S i=1...m<br>
+			with x=∑aiui, y=∑bivi x,y∈span(S)<br>
+			x+y=a1u1+...+anun+b1v1+...+bmvm ∈span(S) (by Def)<br>
+			Likewise, c∈F cx=ca1u1+...+canun ∈span(S) (by Def)<br>
+			Pf of (b): Wanted: if x∈span(S) then x∈W.<br>
+			∃ ui∈S, ai∈F i=1...n s.t. x=∑aiui<br>
+			Since ui∈S =>ui∈W (∵W⊃S)<br>
+			Since W is a subspace (子空間定義) => x∈W =>Done!
+		</p>
+	</div>
 </div>
 <div class="column_edge2">
 	<div class="rightfixed">
@@ -106,6 +136,8 @@
 	<a href="#(Thm1.2)">(Thm1.2)</a><br>
 	<a href="#子空間定義">子空間定義(Thm1.3)</a><br>
 	<a href="#(Thm1.4)">(Thm1.4)</a><br>
+	<a href="#線性組合定義">線性組合定義</a><br>
+	<a href="(Thm1.5)">(Thm1.5)</a><br>
 	</div>
 </div>
 <div style="clear:both">
